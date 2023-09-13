@@ -1,20 +1,34 @@
 /* HypertensionCalculator.css */
-.result {
+.result{
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 25px;
-  color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   margin: 10px;
   padding: 20px;
-  text-align: center;
+}
+
+/* สีพื้นหลังแยกตามค่าที่รับมา */
+.result {
+  background-color: #2977f5;
+}
+
+/* สีข้อความแยกตามค่าที่รับมา */
+.result.ปกติ {
+  color: white;
+}
+
+/* สีขอบ card แยกตามค่าที่รับมา */
+.input-card {
+  border-color: white;
 }
 
 /* กำหนดสีตามระดับความดันโลหิต */
 .result.เหมาะสม {
   background-color: green;
+  color: white;
 }
 
 .result.ปกติ {
@@ -34,8 +48,133 @@
 
 .result.ความดันโลหิตสูงระยะปานกลาง {
   background-color: maroon;
+  color: white;
 }
 
 .result.ความดันโลหิตสูงระยะรุนแรง {
   background-color: darkred;
+  color: white;
+}
+
+/* รูปแบบเหมือน BMI */
+.range-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  background-color: #2977f5;
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.range-title {
+  font-size: 18px;
+  margin-top: 10px;
+  color: white;
+}
+
+.range-slider {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: inherit;
+}
+
+.range-slider:focus {
+  outline: none;
+}
+
+.range-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2497e3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+.range-slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+.range-slider:focus::-webkit-slider-runnable-track {
+  background: #2497e3;
+}
+
+.range-slider::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2497e3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+
+.range-slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+
+.range-slider::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.range-slider::-ms-fill-lower {
+  background: #2497e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.range-slider::-ms-fill-upper {
+  background: #2497e3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.range-slider::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497e3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #a1d0ff;
+  cursor: pointer;
+}
+
+.range-slider:focus::-ms-fill-lower {
+  background: #2497e3;
+}
+
+.range-slider:focus::-ms-fill-upper {
+  background: #2497e3;
 }

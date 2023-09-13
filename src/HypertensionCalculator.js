@@ -1,5 +1,6 @@
+// HypertensionCalculator.js
 import React, { useState, useEffect } from 'react';
-import './HypertensionCalculator.css'; // เพิ่มไฟล์ CSS
+import './HypertensionCalculator.css'; // นี่คือไฟล์ CSS ที่มีการกำหนดสีสำหรับระดับความดันโลหิต
 import RangeCard from './RangeCard';
 
 export default function HypertensionCalculator() {
@@ -24,7 +25,7 @@ export default function HypertensionCalculator() {
   }, [sysPressure, diaPressure]);
 
   return (
-    <div className="tab-content" id="hypertension-tab">
+    <div className="hypertension-tab">
       <h1>คำนวณระดับความดันโลหิต (Hypertension)</h1>
       <RangeCard
         title="ความดันโลหิต (บน)"
@@ -42,7 +43,7 @@ export default function HypertensionCalculator() {
         max={250}
         unit="มม.ปรอท (mmHg)"
       />
-      <div className={`result ${hypertensionLevel.toLowerCase()}`}>
+      <div className={`result ${hypertensionLevel}`}>
         <strong>ระดับความดันโลหิต:</strong> {hypertensionLevel}
       </div>
     </div>

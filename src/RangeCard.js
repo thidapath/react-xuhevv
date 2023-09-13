@@ -1,3 +1,4 @@
+// RangeCard.js
 import React from 'react';
 
 export default function RangeCard({ title, data, setData, min, max, unit }) {
@@ -13,7 +14,7 @@ export default function RangeCard({ title, data, setData, min, max, unit }) {
         max={max}
       />
       <div className="range-value">
-        {data.toFixed(2)} {unit}
+        {data} {unit}
       </div>
     </div>
   );
