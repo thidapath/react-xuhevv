@@ -1,0 +1,41 @@
+/* HypertensionCalculator.css */
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* กำหนดสีตามระดับความดันโลหิต */
+.result.เหมาะสม {
+  background-color: green;
+}
+
+.result.ปกติ {
+  background-color: yellow;
+  color: black;
+}
+
+.result.สูงกว่าปกติ {
+  background-color: orange;
+  color: black;
+}
+
+.result.ความดันโลหิตสูงระยะแรก {
+  background-color: red;
+  color: white;
+}
+
+.result.ความดันโลหิตสูงระยะปานกลาง {
+  background-color: maroon;
+}
+
+.result.ความดันโลหิตสูงระยะรุนแรง {
+  background-color: darkred;
+}
